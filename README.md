@@ -22,7 +22,9 @@ output:
 
 this, this, this
 ```
+## Pseudocode
 
-## main()
-## readFile()
-## printLine()
+### Main()
+
+### printLine()
+
