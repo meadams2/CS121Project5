@@ -17,7 +17,7 @@ int main(){
 
 	inFile.open("data.csv");
 	while (getline(inFile, currentLine)){
-		std::cout << currentLine << std::endl;
+		// std::cout << currentLine << std::endl;
 
 		converter.clear();
 		converter.str(currentLine);
@@ -26,25 +26,32 @@ int main(){
 		getline(converter, sNum2, ',');
 		getline(converter, text);
 
-		std::cout << sNum1 << std::endl;
-		std::cout << sNum2 << std::endl;
-		std::cout << text << std::endl;
+	// Testing parsing
+	//	std::cout << sNum1 << std::endl;
+	//	std::cout << sNum2 << std::endl;
+	//	std::cout << text << std::endl;
 
-		converter >> sNum1 >> num1;
-		converter >> sNum2 >> num2;
-		
-		int sum = num1 + num2;
+		converter.clear();
+		converter.str(sNum1);
+		converter >> num1;
+		//std::cout << num1;
+
+		converter.clear();
+		converter.str(sNum2);
+		converter >> num2;
+		//std::cout << num2;
+	
+		sum = (num1 + num2);
 		for (int i = 0; i < sum; i++){
 			std::cout << text;
-		}//end for loop
+		} //end for loop
 
 		std::cout << std::endl;
 
 		converter.clear();
 		converter.str("");
-	}//end while loop
+	} //end while loop
 
 	inFile.close();
-}//end main
-
+} //end main
 
