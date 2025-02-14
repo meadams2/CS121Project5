@@ -28,7 +28,7 @@ Include fstream, iostream, sstream,
 
 ### Main()
 
-Call file using std::ifstream and inFile variable. Initialize string variable called currentLine. Initialize stringstream called ss. Initialize integer variable called counter. Initialize string variable called text. 
+Call file using std::ifstream and inFile variable. Initialize string variable called currentLine. Initialize stringstream called converter. Initialize string placeholder called sNum1. Initialize string placeholder called sNum2. Initialize string variable placeholder called text. 
 
 Open "data.csv". use getline as a sentry variable for while loop. Call 1st column of data num1. Call 2nd column of data num2. Call third line of data text. 
 
@@ -38,14 +38,9 @@ while getline:
 	Load the variables into ss stream. 
 	Read the counter as a string and specify a comma delimiter. 
 	Read the text with new line as a default delimeter
-	Call printLine(num1, num2, text)
-```
-
-### printLine()
-
-Create int variable newNum. newNum is num1 + num2. 
-
-```
-For any iteration less than newNum:
-	print text
+	Convert sNum1 to int. 
+	Convert sNum2 to int. 
+	Int sum is num1 + num2.
+	For i less than sum:
+		print text
 ```
