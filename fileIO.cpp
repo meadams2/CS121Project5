@@ -2,8 +2,6 @@
 #include <iostream>
 #include <sstream>
 
-void printLine(int, int, std::string);
-
 int main(){
 	std::ifstream inFile;
 	std::string currentLine;
@@ -35,18 +33,18 @@ int main(){
 		converter >> sNum1 >> num1;
 		converter >> sNum2 >> num2;
 		
-		printLine(num1, num2, text);
+		sum = num1 + num2;
+		for (int i = 0; i < sum; i++){
+			std::cout << text;
+		}//end for loop
+
+		std::cout << std::endl;
 
 		converter.clear();
 		converter.str("");
 	}//end while loop
+
+	inFile.close();
 }//end main
 
-void printLine(int num1, int num2, std::string text){
-	int sum = num1 + num2;
-	for (int i = 0; i < sum; i++){
-		std::cout << text;
-	}//end for loop
-	std::cout << std::endl;
-}//end printLine
 
