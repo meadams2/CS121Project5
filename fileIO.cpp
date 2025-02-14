@@ -33,7 +33,7 @@ int main(){
 		converter >> sNum1 >> num1;
 		converter >> sNum2 >> num2;
 		
-		sum = num1 + num2;
+		int sum = num1 + num2;
 		for (int i = 0; i < sum; i++){
 			std::cout << text;
 		}//end for loop
